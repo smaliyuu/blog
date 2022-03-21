@@ -32,7 +32,7 @@ $ vim .git/config
 [core]
     sshCommand = "ssh -i ~/.ssh/xxx_github_rsa"
 [remote "origin"]
-	url = git@github.com:xxx/Blog.git
+    url = git@github.com:xxx/Blog.git
 ```
 注意：
 1. url里面冒号后面是用户名，也就是ssh的用户名
