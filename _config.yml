@@ -1,7 +1,7 @@
 # Site settings
 title:          SmaliYuu
 description:    "SmaliYuu's Blog"
-baseurl:        "/Blog"
+baseurl:        "/blog"
 url:            "https://smaliyuu.github.io"
 
 # Google Analytics
