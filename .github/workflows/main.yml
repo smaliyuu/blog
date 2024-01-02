@@ -1,0 +1,26 @@
+name: Deploy Site
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Commit and Push
+        run: |
+          ls
+          rm -rf .git
+          git init
+          git checkout -b main
+          git add -A
+          git -c user.name='smaliyuu' -c user.email='smaliyuu@github.com' commit -m 'Update' 
+          git remote add origin https://${{secrets.API_TOKEN_GITHUB}}@github.com/smaliyuu/blog.git
+          git push origin main -f -q
